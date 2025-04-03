@@ -1,0 +1,55 @@
+import java.util.Scanner;
+public class MediaFacens {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+            //Vou deixar algumas (//) para servir de lembrete!
+
+            //Variaveis em double, pois as notas podem ser números decimais
+        double ac1, ac2, af;
+        double notaMinima;
+
+
+            //Aqui, é a apresentação do serviço de calcular a media!!
+        System.out.println("Olá! Eu serei seu assistente e vou ajudar você a calcular sua média final! ");
+
+            //Pedindo para o usuario quais foram as notas dele na AC1, AC2 e AF
+        System.out.println("Primeiramente, digite a sua nota da AC1: ");
+            ac1 = sc.nextDouble();
+        System.out.println("Agora, digite a sua nota da AC2: ");
+            ac2 = sc.nextDouble();
+        System.out.println("Por fim, digite a sua nota da AF: ");
+            af = sc.nextDouble();
+
+            //Como pedido na prova, aqui a pessoa vai poder digitar qual nota minima que ela precisa pra passar
+        System.out.println("Digite aqui a nota minima que você precisa para passar: ");
+            notaMinima = sc.nextDouble();
+
+            //Já aqui, vai mostrar os valores que a pessoa digitou na nota da AC1, AC2 e AF
+        System.out.println("As notas digitadas são: ");
+        System.out.println("AC1 = " + ac1);
+        System.out.println("AC2 = " + ac2);
+        System.out.println("AF = " + af);
+
+            //Bom, aqui eu quis testar fazer uma conversão de dados em Cast Explicita
+            //Assim, convertendo uma double em int, no caso, um numero 
+            //decimal em um numero inteiro! 
+            //Logo em seguida, apresentando pro usuario a media já somada das suas notas
+            //e também, qual o valor minimo que ele precisa pra pssar 
+        double mediaFinal = (int) (ac1+ac2+af)/3;
+        System.out.println("Com essas notas, sua média final é: " + mediaFinal);
+        System.out.println("A nota mínima para passar é: " + notaMinima);
+
+
+            //Aqui, eu coloquei um "True/False" que vai mostrar, se a pessoa
+            //passou ou não no semestre
+        if(mediaFinal >= notaMinima){
+            System.out.println("Opa, você passou! Meus parabens.");
+        }
+        else{
+            System.out.println("Opa, pelo visto você não passou. Recomendo que estude um pouco mais! ");
+        }
+
+        sc.close();
+
+    }
+}
